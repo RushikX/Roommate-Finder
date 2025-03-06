@@ -1,0 +1,19 @@
+// src/firebase/config.js
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider  } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBWfyEnXdCkXMgtx_mk4DUs_mHO_Zv5nNU",
+  authDomain: "hostel-roommate-finder.firebaseapp.com",
+  projectId: "hostel-roommate-finder",
+  storageBucket: "hostel-roommate-finder.firebasestorage.app",
+  messagingSenderId: "650317866850",
+  appId: "1:650317866850:web:a9584e6c565b7e871d6e3b",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+
+export { auth, googleProvider };  
